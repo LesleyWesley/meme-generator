@@ -7,6 +7,10 @@ body {
   font-family: "Karla", sans-serif;
 }
 
+main {
+  padding: 36px;
+}
+
 header {
   padding: 20px;
   display: flex;
@@ -35,4 +39,29 @@ h1 {
 
 .header--course-title {
   font-size: .75rem;
+}
+
+/*Styling for Form */
+
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+
+.form--input {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background-image: linear-gradient(90deg, #672280, #A626D3);
+  color: #FFF;
+  border: none;
+  cursor: pointer;
 }
