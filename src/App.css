@@ -65,3 +65,12 @@ h1 {
   border: none;
   cursor: pointer;
 }
+
+/*Styling for Meme Image */
+
+
+.meme-image {
+  width: 100%;
+  grid-column: 1 / -1;
+
+}
