@@ -43,7 +43,11 @@ function Meme() {
             Get a new meme image 🖼
             </button>
 
-            <img src={meme.randomImage} alt="meme" className="meme-image" />
+            <div className="meme">
+              <img src={meme.randomImage} className="meme--image" />
+              <h2 className="meme--text top">one does not</h2>
+              <h2 className="meme--text bottom">simply walk into mordor</h2>
+          </div>
         </div>
     </main>
   )
