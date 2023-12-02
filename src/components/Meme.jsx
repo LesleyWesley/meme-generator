@@ -10,12 +10,17 @@ function Meme() {
     randomImage: "http://i.imgflip.com/1bij.jpg"
   })
 
-  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+  const [allMemeImages, setAllMemeImages] = React.useState([]);
 
+  React.useEffect( () => {
+    fetch("https://api.imgflip.com/get_memes")
+    .then(res => res.json())
+    .then(data => setAllMemeImages(data.data.memes))
+  }, [])
 
   function getRandomMeme() {
-    const randomIndex = Math.floor(Math.random() * allMemeImages.data.memes.length)
-    const randomMemeUrl = allMemeImages.data.memes[randomIndex].url;
+    const randomIndex = Math.floor(Math.random() * allMemeImages.length)
+    const randomMemeUrl = allMemeImages[randomIndex].url;
 
     setMeme(meme => ({
       ...meme,
